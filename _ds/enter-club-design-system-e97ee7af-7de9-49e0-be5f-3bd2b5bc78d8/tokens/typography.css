@@ -1,0 +1,47 @@
+/* Enter Club — Typography tokens
+   One family for everything: Neue Haas Grotesk Text.
+   Hierarchy is built from WEIGHT + SIZE, not different families.
+   Body = Roman 400. Titles = Bold 700 (or Medium 500 for soft emphasis). */
+
+:root {
+  --font-sans: "Neue Haas Grotesk Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* The "ENTER club" wordmark uses a bespoke rounded display face — it is a
+     locked logo asset, NOT a system font. Never set type in it. */
+  --font-display: var(--font-sans);
+  --font-body: var(--font-sans);
+
+  /* Weights */
+  --fw-regular: 400; /* @kind font */
+  --fw-medium: 500; /* @kind font */
+  --fw-bold: 700; /* @kind font */
+
+  /* Type scale (1.250 major-third-ish, tuned) */
+  --fs-display: 4.5rem;   /* 72px hero */
+  --fs-h1: 3rem;          /* 48px */
+  --fs-h2: 2.25rem;       /* 36px */
+  --fs-h3: 1.625rem;      /* 26px */
+  --fs-h4: 1.25rem;       /* 20px */
+  --fs-lg: 1.125rem;      /* 18px lead */
+  --fs-base: 1rem;        /* 16px body */
+  --fs-sm: 0.875rem;      /* 14px */
+  --fs-xs: 0.75rem;       /* 12px caption / overline */
+
+  /* Line heights */
+  --lh-tight: 1.04; /* @kind font */
+  --lh-snug: 1.18; /* @kind font */
+  --lh-normal: 1.5; /* @kind font */
+  --lh-relaxed: 1.65; /* @kind font */
+
+  /* Letter spacing */
+  --ls-tight: -0.02em;    /* large bold titles @kind font */
+  --ls-snug: -0.01em;     /* @kind font */
+  --ls-normal: 0;         /* @kind font */
+  --ls-wide: 0.04em;      /* overlines / small caps labels @kind font */
+  --ls-wider: 0.12em;     /* eyebrow ALL-CAPS @kind font */
+
+  /* Semantic roles */
+  --text-display-weight: var(--fw-bold);
+  --text-title-weight: var(--fw-bold);
+  --text-body-weight: var(--fw-regular);
+  --text-label-weight: var(--fw-medium);
+}

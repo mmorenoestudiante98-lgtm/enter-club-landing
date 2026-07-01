@@ -1,0 +1,45 @@
+/* Enter Club — Spacing, radius, shadow, motion tokens */
+
+:root {
+  /* Spacing scale (4px base) */
+  --space-0: 0;
+  --space-1: 0.25rem;  /* 4 */
+  --space-2: 0.5rem;   /* 8 */
+  --space-3: 0.75rem;  /* 12 */
+  --space-4: 1rem;     /* 16 */
+  --space-5: 1.5rem;   /* 24 */
+  --space-6: 2rem;     /* 32 */
+  --space-7: 3rem;     /* 48 */
+  --space-8: 4rem;     /* 64 */
+  --space-9: 6rem;     /* 96 */
+
+  /* Radius — friendly, rounded but not pill-everywhere */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+
+  /* Borders */
+  --border-width: 1px; /* @kind other */
+  --border-width-strong: 1.5px; /* @kind other */
+
+  /* Shadows — warm, soft, low-contrast (warm-tinted, never blue-grey) */
+  --shadow-xs: 0 1px 2px rgba(77, 32, 9, 0.06);
+  --shadow-sm: 0 1px 3px rgba(77, 32, 9, 0.08), 0 1px 2px rgba(77, 32, 9, 0.06);
+  --shadow-md: 0 4px 12px rgba(77, 32, 9, 0.10);
+  --shadow-lg: 0 10px 28px rgba(77, 32, 9, 0.14);
+  --shadow-brand: 0 6px 18px rgba(152, 66, 22, 0.28);
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1); /* @kind other */
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1); /* @kind other */
+  --dur-fast: 120ms; /* @kind other */
+  --dur-base: 200ms; /* @kind other */
+  --dur-slow: 320ms; /* @kind other */
+
+  /* Layout */
+  --container-max: 1200px; /* @kind other */
+  --container-prose: 680px; /* @kind other */
+}

@@ -1,0 +1,77 @@
+/* Enter Club — Color tokens
+   Primary  #984216  terracotta / rust  (brand, CTAs, headers)
+   Secondary #fdf7e5 warm cream         (page surface, light text on dark)
+   Tertiary #8e8b68  sage olive         (details, accents, muted)
+*/
+
+:root {
+  /* ---- Brand ramp: terracotta ---- */
+  --rust-900: #4d2009;
+  --rust-800: #6b2e10;
+  --rust-700: #803816;
+  --rust-600: #984216; /* PRIMARY */
+  --rust-500: #ad5126;
+  --rust-400: #c4683f;
+  --rust-300: #d98c66;
+  --rust-200: #e8b69b;
+  --rust-100: #f3d9c9;
+  --rust-50:  #faeee5;
+
+  /* ---- Cream ramp: warm paper ---- */
+  --cream-50:  #fffdf8;
+  --cream-100: #fdf7e5; /* SECONDARY */
+  --cream-200: #f7edd2;
+  --cream-300: #efe1bd;
+  --cream-400: #e3d2a6;
+
+  /* ---- Olive ramp: sage detail ---- */
+  --olive-700: #5f5d44;
+  --olive-600: #747253;
+  --olive-500: #8e8b68; /* TERTIARY */
+  --olive-400: #a5a283;
+  --olive-300: #c2bfa6;
+  --olive-200: #dcdac6;
+  --olive-100: #ecead9;
+
+  /* ---- Neutral / ink (warm-tinted) ---- */
+  --ink-900: #2a1d12;
+  --ink-700: #4a3a2c;
+  --ink-500: #6f6253;
+  --ink-300: #a89c8b;
+  --ink-100: #e7e0d3;
+  --white:   #ffffff;
+
+  /* ---- Semantic — derived from terracota ramp ---- */
+  --color-success: var(--rust-600);
+  --color-warning: var(--rust-700);
+  --color-danger:  var(--rust-800);
+  --color-info:    var(--rust-500);
+
+  /* ---- Semantic aliases ---- */
+  --brand:            var(--rust-600);
+  --brand-hover:      var(--rust-700);
+  --brand-active:     var(--rust-800);
+  --brand-soft:       var(--rust-50);
+  --accent:           var(--olive-500);
+
+  --bg-page:          var(--cream-100);
+  --bg-page-alt:      var(--cream-200);
+  --surface-card:     var(--cream-50);
+  --surface-raised:   var(--white);
+  --surface-inverse:  var(--rust-600);
+  --surface-sunken:   var(--cream-200);
+
+  --text-strong:      var(--ink-900);
+  --text-body:        var(--ink-700);
+  --text-muted:       var(--ink-500);
+  --text-on-brand:    var(--cream-100);
+  --text-on-accent:   var(--cream-50);
+  --text-brand:       var(--rust-600);
+
+  --border-subtle:    #e6ddc8;
+  --border-default:   #d8cdb2;
+  --border-strong:    var(--olive-400);
+  --border-brand:     var(--rust-600);
+
+  --focus-ring:       var(--rust-400);
+}

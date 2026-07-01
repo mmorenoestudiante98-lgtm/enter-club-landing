@@ -1,0 +1,46 @@
+/* Enter Club — Webfonts
+   Neue Haas Grotesk Text (Trial). One family, weights 400/500/700 + italics.
+   Body = Roman (400). Titles = Bold (700), per-section weight. */
+
+@font-face {
+  font-family: "Neue Haas Grotesk Text";
+  src: url("../assets/fonts/NeueHaasGrotText-55Roman.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Haas Grotesk Text";
+  src: url("../assets/fonts/NeueHaasGrotText-56Italic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Haas Grotesk Text";
+  src: url("../assets/fonts/NeueHaasGrotText-65Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Haas Grotesk Text";
+  src: url("../assets/fonts/NeueHaasGrotText-66MediumItalic.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Haas Grotesk Text";
+  src: url("../assets/fonts/NeueHaasGrotText-75Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Haas Grotesk Text";
+  src: url("../assets/fonts/NeueHaasGrotText-76BoldItalic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
