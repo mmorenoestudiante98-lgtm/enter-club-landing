@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Recibido — Enter Club</title>
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '2051156148868420');
+  fbq('track', 'PageView');
+  fbq('track', 'Lead');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=2051156148868420&ev=Lead&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
+  <style>
+    @font-face {
+      font-family: "Neue Haas Grotesk Text";
+      src: url("../_ds/enter-club-design-system-e97ee7af-7de9-49e0-be5f-3bd2b5bc78d8/assets/fonts/NeueHaasGrotText-55Roman.otf") format("opentype");
+      font-weight: 400; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: "Neue Haas Grotesk Text";
+      src: url("../_ds/enter-club-design-system-e97ee7af-7de9-49e0-be5f-3bd2b5bc78d8/assets/fonts/NeueHaasGrotText-65Medium.otf") format("opentype");
+      font-weight: 500; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: "Neue Haas Grotesk Text";
+      src: url("../_ds/enter-club-design-system-e97ee7af-7de9-49e0-be5f-3bd2b5bc78d8/assets/fonts/NeueHaasGrotText-75Bold.otf") format("opentype");
+      font-weight: 700; font-style: normal; font-display: swap;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --rust-600: #984216;
+      --rust-700: #803816;
+      --rust-50:  #faeee5;
+      --cream-100: #fdf7e5;
+      --cream-200: #f7edd2;
+      --ink-900: #2a1d12;
+      --ink-700: #4a3a2c;
+      --ink-500: #6f6253;
+      --olive-500: #8e8b68;
+      --font-sans: "Neue Haas Grotesk Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--cream-100);
+      color: var(--ink-700);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* NAV */
+    nav {
+      background: var(--cream-100);
+      border-bottom: 1px solid #e6ddc8;
+      padding: 0 clamp(20px, 5vw, 64px);
+      height: 64px;
+      display: flex;
+      align-items: center;
+    }
+    nav a { display: flex; align-items: center; text-decoration: none; }
+    nav img { height: 40px; mix-blend-mode: multiply; }
+
+    /* MAIN */
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: clamp(48px, 8vw, 96px) clamp(20px, 5vw, 32px);
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 4px 24px rgba(77, 32, 9, 0.09);
+      padding: clamp(40px, 6vw, 64px) clamp(32px, 5vw, 56px);
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .check {
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 2.75rem);
+      font-weight: 700;
+      color: var(--rust-600);
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      font-size: clamp(1rem, 2.5vw, 1.125rem);
+      color: var(--ink-500);
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+
+    .steps-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--olive-500);
+      margin-bottom: 16px;
+    }
+
+    ol {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 36px;
+    }
+
+    ol li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: 1rem;
+      line-height: 1.55;
+      color: var(--ink-700);
+    }
+
+    .step-num {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--rust-50);
+      border: 1.5px solid var(--rust-600);
+      color: var(--rust-600);
+      font-size: 0.8rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+
+    .note {
+      font-size: 0.875rem;
+      color: var(--ink-500);
+      line-height: 1.6;
+      padding: 16px 20px;
+      background: var(--cream-200);
+      border-radius: 10px;
+      margin-bottom: 36px;
+    }
+
+    .note a {
+      color: var(--rust-600);
+      font-weight: 500;
+      text-decoration: none;
+    }
+    .note a:hover { text-decoration: underline; }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--rust-600);
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .back-link:hover { opacity: 0.75; }
+
+    /* FOOTER */
+    footer {
+      background: var(--rust-600);
+      padding: 20px clamp(20px, 5vw, 64px);
+      text-align: center;
+    }
+    footer p {
+      font-size: 0.8rem;
+      color: var(--cream-100);
+      opacity: 0.85;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="../">
+      <img src="../uploads/Logo_Header_Landing.png" alt="Enter Club">
+    </a>
+  </nav>
+
+  <main>
+    <div class="card">
+      <div class="check">✅</div>
+      <h1>Recibido</h1>
+      <p class="subtitle">Ya está, lo más difícil era empezar.<br>Gracias por contarnos.</p>
+
+      <p class="steps-label">Qué pasa ahora</p>
+      <ol>
+        <li>
+          <span class="step-num">1</span>
+          <span>Leemos tu solicitud nosotros mismos.</span>
+        </li>
+        <li>
+          <span class="step-num">2</span>
+          <span>En un máximo de 48 horas te escribimos para cuadrar una llamada.</span>
+        </li>
+        <li>
+          <span class="step-num">3</span>
+          <span>En la llamada hablamos de tu proyecto y vemos juntos si el grupo encaja contigo. Sin compromiso.</span>
+        </li>
+      </ol>
+
+      <div class="note">
+        Si no ves nuestro mensaje, mira en spam. Y si tienes cualquier duda, escríbenos a
+        <a href="mailto:hola.enterclub@gmail.com">hola.enterclub@gmail.com</a>
+      </div>
+
+      <a href="../" class="back-link">← Volver a la página principal</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Enter Club · enterclub.net</p>
+  </footer>
+
+</body>
+</html>
