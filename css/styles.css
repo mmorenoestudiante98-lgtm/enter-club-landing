@@ -1,0 +1,301 @@
+/* Enter Club — hoja de estilos única (tokens + base + página) */
+
+/* Enter Club — Webfonts
+   Neue Haas Grotesk Text (Trial). One family, weights 400/500/700 + italics.
+   Body = Roman (400). Titles = Bold (700), per-section weight. */
+
+@font-face {
+  font-family: "Neue Haas Grotesk Text";
+  src: url("../assets/fonts/NeueHaasGrotText-55Roman.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Haas Grotesk Text";
+  src: url("../assets/fonts/NeueHaasGrotText-56Italic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Haas Grotesk Text";
+  src: url("../assets/fonts/NeueHaasGrotText-65Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Haas Grotesk Text";
+  src: url("../assets/fonts/NeueHaasGrotText-66MediumItalic.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Haas Grotesk Text";
+  src: url("../assets/fonts/NeueHaasGrotText-75Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Haas Grotesk Text";
+  src: url("../assets/fonts/NeueHaasGrotText-76BoldItalic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+/* Enter Club — Color tokens
+   Primary  #984216  terracotta / rust  (brand, CTAs, headers)
+   Secondary #fdf7e5 warm cream         (page surface, light text on dark)
+   Tertiary #8e8b68  sage olive         (details, accents, muted)
+*/
+
+:root {
+  /* ---- Brand ramp: terracotta ---- */
+  --rust-900: #4d2009;
+  --rust-800: #6b2e10;
+  --rust-700: #803816;
+  --rust-600: #984216; /* PRIMARY */
+  --rust-500: #ad5126;
+  --rust-400: #c4683f;
+  --rust-300: #d98c66;
+  --rust-200: #e8b69b;
+  --rust-100: #f3d9c9;
+  --rust-50:  #faeee5;
+
+  /* ---- Cream ramp: warm paper ---- */
+  --cream-50:  #fffdf8;
+  --cream-100: #fdf7e5; /* SECONDARY */
+  --cream-200: #f7edd2;
+  --cream-300: #efe1bd;
+  --cream-400: #e3d2a6;
+
+  /* ---- Olive ramp: sage detail ---- */
+  --olive-700: #5f5d44;
+  --olive-600: #747253;
+  --olive-500: #8e8b68; /* TERTIARY */
+  --olive-400: #a5a283;
+  --olive-300: #c2bfa6;
+  --olive-200: #dcdac6;
+  --olive-100: #ecead9;
+
+  /* ---- Neutral / ink (warm-tinted) ---- */
+  --ink-900: #2a1d12;
+  --ink-700: #4a3a2c;
+  --ink-500: #6f6253;
+  --ink-300: #a89c8b;
+  --ink-100: #e7e0d3;
+  --white:   #ffffff;
+
+  /* ---- Semantic — derived from terracota ramp ---- */
+  --color-success: var(--rust-600);
+  --color-warning: var(--rust-700);
+  --color-danger:  var(--rust-800);
+  --color-info:    var(--rust-500);
+
+  /* ---- Semantic aliases ---- */
+  --brand:            var(--rust-600);
+  --brand-hover:      var(--rust-700);
+  --brand-active:     var(--rust-800);
+  --brand-soft:       var(--rust-50);
+  --accent:           var(--olive-500);
+
+  --bg-page:          var(--cream-100);
+  --bg-page-alt:      var(--cream-200);
+  --surface-card:     var(--cream-50);
+  --surface-raised:   var(--white);
+  --surface-inverse:  var(--rust-600);
+  --surface-sunken:   var(--cream-200);
+
+  --text-strong:      var(--ink-900);
+  --text-body:        var(--ink-700);
+  --text-muted:       var(--ink-500);
+  --text-on-brand:    var(--cream-100);
+  --text-on-accent:   var(--cream-50);
+  --text-brand:       var(--rust-600);
+
+  --border-subtle:    #e6ddc8;
+  --border-default:   #d8cdb2;
+  --border-strong:    var(--olive-400);
+  --border-brand:     var(--rust-600);
+
+  --focus-ring:       var(--rust-400);
+}
+
+
+/* Enter Club — Typography tokens
+   One family for everything: Neue Haas Grotesk Text.
+   Hierarchy is built from WEIGHT + SIZE, not different families.
+   Body = Roman 400. Titles = Bold 700 (or Medium 500 for soft emphasis). */
+
+:root {
+  --font-sans: "Neue Haas Grotesk Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* The "ENTER club" wordmark uses a bespoke rounded display face — it is a
+     locked logo asset, NOT a system font. Never set type in it. */
+  --font-display: var(--font-sans);
+  --font-body: var(--font-sans);
+
+  /* Weights */
+  --fw-regular: 400; /* @kind font */
+  --fw-medium: 500; /* @kind font */
+  --fw-bold: 700; /* @kind font */
+
+  /* Type scale (1.250 major-third-ish, tuned) */
+  --fs-display: 4.5rem;   /* 72px hero */
+  --fs-h1: 3rem;          /* 48px */
+  --fs-h2: 2.25rem;       /* 36px */
+  --fs-h3: 1.625rem;      /* 26px */
+  --fs-h4: 1.25rem;       /* 20px */
+  --fs-lg: 1.125rem;      /* 18px lead */
+  --fs-base: 1rem;        /* 16px body */
+  --fs-sm: 0.875rem;      /* 14px */
+  --fs-xs: 0.75rem;       /* 12px caption / overline */
+
+  /* Line heights */
+  --lh-tight: 1.04; /* @kind font */
+  --lh-snug: 1.18; /* @kind font */
+  --lh-normal: 1.5; /* @kind font */
+  --lh-relaxed: 1.65; /* @kind font */
+
+  /* Letter spacing */
+  --ls-tight: -0.02em;    /* large bold titles @kind font */
+  --ls-snug: -0.01em;     /* @kind font */
+  --ls-normal: 0;         /* @kind font */
+  --ls-wide: 0.04em;      /* overlines / small caps labels @kind font */
+  --ls-wider: 0.12em;     /* eyebrow ALL-CAPS @kind font */
+
+  /* Semantic roles */
+  --text-display-weight: var(--fw-bold);
+  --text-title-weight: var(--fw-bold);
+  --text-body-weight: var(--fw-regular);
+  --text-label-weight: var(--fw-medium);
+}
+
+
+/* Enter Club — Spacing, radius, shadow, motion tokens */
+
+:root {
+  /* Spacing scale (4px base) */
+  --space-0: 0;
+  --space-1: 0.25rem;  /* 4 */
+  --space-2: 0.5rem;   /* 8 */
+  --space-3: 0.75rem;  /* 12 */
+  --space-4: 1rem;     /* 16 */
+  --space-5: 1.5rem;   /* 24 */
+  --space-6: 2rem;     /* 32 */
+  --space-7: 3rem;     /* 48 */
+  --space-8: 4rem;     /* 64 */
+  --space-9: 6rem;     /* 96 */
+
+  /* Radius — friendly, rounded but not pill-everywhere */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+
+  /* Borders */
+  --border-width: 1px; /* @kind other */
+  --border-width-strong: 1.5px; /* @kind other */
+
+  /* Shadows — warm, soft, low-contrast (warm-tinted, never blue-grey) */
+  --shadow-xs: 0 1px 2px rgba(77, 32, 9, 0.06);
+  --shadow-sm: 0 1px 3px rgba(77, 32, 9, 0.08), 0 1px 2px rgba(77, 32, 9, 0.06);
+  --shadow-md: 0 4px 12px rgba(77, 32, 9, 0.10);
+  --shadow-lg: 0 10px 28px rgba(77, 32, 9, 0.14);
+  --shadow-brand: 0 6px 18px rgba(152, 66, 22, 0.28);
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1); /* @kind other */
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1); /* @kind other */
+  --dur-fast: 120ms; /* @kind other */
+  --dur-base: 200ms; /* @kind other */
+  --dur-slow: 320ms; /* @kind other */
+
+  /* Layout */
+  --container-max: 1200px; /* @kind other */
+  --container-prose: 680px; /* @kind other */
+}
+
+
+/* Enter Club — Design System
+   Global stylesheet entry. Consumers link THIS file only.
+   Keep this as 
+
+/* ---- Base ---- */
+body {
+  font-family: var(--font-body);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-base);
+  line-height: var(--lh-normal);
+  color: var(--text-body);
+  background: var(--bg-page);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  color: var(--text-strong);
+  letter-spacing: var(--ls-tight);
+  line-height: var(--lh-snug);
+  margin: 0;
+}
+
+p { text-wrap: pretty; }
+
+a { color: var(--text-brand); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ---- Página ---- */
+body { margin: 0; background: var(--bg-page); }
+a { color: var(--text-brand); }
+a:hover { color: var(--brand-hover); text-decoration: none; }
+.ec-cta { transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out); }
+.ec-cta:hover { transform: translateY(-2px) scale(1.03); box-shadow: var(--shadow-lg); }
+a.ec-cta { display: inline-flex; align-items: center; justify-content: center; text-decoration: none; box-sizing: border-box; border: none; border-radius: var(--radius-pill); font-family: var(--font-sans); font-weight: 500; letter-spacing: var(--ls-snug); cursor: pointer; white-space: nowrap; }
+a.ec-cta:hover { text-decoration: none; }
+.btn-header { background: var(--cream-100); color: var(--text-brand); height: 36px; padding: 0 16px; font-size: var(--fs-sm); box-shadow: var(--shadow-xs); }
+.btn-header:hover { color: var(--text-brand); }
+.btn-lg { background: var(--cream-100); color: var(--text-brand); height: 54px; padding: 0 32px; font-size: var(--fs-lg); box-shadow: var(--shadow-md); }
+.btn-lg:hover { color: var(--text-brand); }
+.btn-brand { background: var(--brand); color: var(--text-on-brand); height: 54px; padding: 0 32px; font-size: var(--fs-lg); box-shadow: var(--shadow-brand); }
+.btn-brand:hover { color: var(--text-on-brand); }
+.ec-gp { opacity: 0; visibility: hidden; transition: opacity 160ms ease, visibility 160ms; }
+.ec-g:hover .ec-gp, .ec-g:focus-within .ec-gp { opacity: 1; visibility: visible; }
+@media (max-width: 720px) { .ec-tl-row { grid-template-columns: 48px 1fr !important; column-gap: 16px !important; } .ec-tl-node { grid-column: 1 !important; } .ec-tl-text { grid-column: 2 !important; text-align: left !important; justify-self: start !important; } .ec-tl-line { left: 24px !important; } }
+@keyframes ec-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.ec-marquee { display: flex; width: max-content; gap: 14px; padding-left: 14px; animation: ec-marquee 70s linear infinite; }
+@media (prefers-reduced-motion: reduce) { .ec-marquee { animation: none; } }
+.ec-faq-btn { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; background: transparent; border: none; text-align: left; padding: 24px 0; font-family: var(--font-sans); font-size: var(--fs-lg); font-weight: 700; color: var(--brand); cursor: pointer; }
+.ec-faq-icon { flex: none; width: 32px; height: 32px; border-radius: 50%; border: 1.5px solid var(--brand); color: var(--brand); font-size: 16px; font-weight: 400; display: flex; align-items: center; justify-content: center; transition: transform var(--dur-base) var(--ease-out); }
+.ec-faq-btn[aria-expanded="true"] .ec-faq-icon { transform: rotate(45deg); }
+.ec-faq-panel { margin: 0; padding: 0 0 24px; font-size: var(--fs-base); line-height: var(--lh-relaxed); color: var(--text-body); }
+.ec-faq-panel[hidden] { display: none; }
+#cookie-banner:not([hidden]) { display: flex; }
+#cookie-config:not([hidden]) { display: flex; }
+.ec-ck-btn { border-radius: var(--radius-pill); height: 40px; padding: 0 18px; font-family: var(--font-sans); font-weight: 500; font-size: var(--fs-sm); cursor: pointer; border: 1.5px solid var(--brand); }
+.ec-ck-btn.ghost { background: transparent; color: var(--brand); }
+.ec-ck-btn.solid { background: var(--brand); color: var(--text-on-brand); }
+.ec-switch { flex: none; width: 44px; height: 24px; border-radius: 12px; border: none; padding: 0; background: #cfc6b4; position: relative; cursor: pointer; transition: background var(--dur-base) var(--ease-out); }
+.ec-switch::after { content: ""; position: absolute; top: 2px; left: 2px; width: 20px; height: 20px; border-radius: 50%; background: #fff; transition: transform var(--dur-base) var(--ease-out); }
+.ec-switch[aria-checked="true"] { background: var(--brand); }
+.ec-switch[aria-checked="true"]::after { transform: translateX(20px); }
+/* ---- Páginas legales ---- */
+.legal-content h1 { font-size: 2rem; font-weight: var(--fw-bold); color: var(--brand); letter-spacing: var(--ls-tight); margin: 0 0 24px; }
+.legal-content h2 { font-size: var(--fs-h3); font-weight: var(--fw-bold); color: var(--text-strong); margin: 32px 0 12px; }
+.legal-content p { font-size: var(--fs-base); line-height: var(--lh-relaxed); color: var(--text-body); margin: 0 0 14px; }
+.legal-content ul { margin: 0 0 14px; padding-left: 22px; }
+.legal-content li { font-size: var(--fs-base); line-height: var(--lh-relaxed); color: var(--text-body); margin: 0 0 8px; }
+.legal-content table { width: 100%; border-collapse: collapse; margin: 0 0 20px; font-size: var(--fs-sm); }
+.legal-content th, .legal-content td { border: 1px solid var(--border-subtle); padding: 8px 10px; text-align: left; color: var(--text-body); }
+.legal-content th { background: var(--surface-sunken); color: var(--text-strong); }
+.legal-content strong { color: var(--text-strong); }
+.legal-content a { color: var(--brand); }
+.legal-content a:hover { color: var(--brand-hover); }
