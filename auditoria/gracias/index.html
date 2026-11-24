@@ -27,6 +27,23 @@
   // Evento de conversión: se dispara al cargar esta página (requiere el código base del píxel de arriba).
   window.addEventListener('load', function () { if (typeof fbq === 'function') fbq('track', 'Lead'); });
 </script>
+<!-- Calendly: widget emergente (popup) -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<script>
+  // Abre Calendly encima de la página. Si el widget no ha cargado, el enlace funciona normal.
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest('#cta-gracias-reservar');
+    if (!btn || !window.Calendly) return;
+    e.preventDefault();
+    Calendly.initPopupWidget({ url: btn.href });
+  });
+  // Reserva completada en Calendly → evento Schedule del píxel.
+  window.addEventListener('message', function (e) {
+    if (e.origin !== 'https://calendly.com' || !e.data || e.data.event !== 'calendly.event_scheduled') return;
+    if (typeof fbq === 'function') fbq('track', 'Schedule');
+  });
+</script>
 <style>
   body { background: #fdf7e5; }
   .gr-btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; box-sizing: border-box; min-height: 52px; padding: 12px 26px; border-radius: var(--radius-pill); background: transparent; color: #984216; box-shadow: inset 0 0 0 1.5px #984216; font-family: var(--font-sans); font-weight: var(--fw-bold); font-size: var(--fs-sm); letter-spacing: 0.08em; text-decoration: none; transition: transform var(--dur-base) var(--ease-out), background var(--dur-base) var(--ease-out); }
@@ -74,7 +91,7 @@
     </div>
 
     <p style="margin: clamp(32px,5vw,44px) 0 14px; font-size: var(--fs-sm); color: var(--text-muted);">¿Prefieres reservar tú directamente?</p>
-    <a id="cta-gracias-reservar" class="gr-btn" href="#reservar">RESERVAR MI AUDITORÍA <span aria-hidden="true">→</span></a>
+    <a id="cta-gracias-reservar" class="gr-btn" href="https://calendly.com/hola-enterclub/auditoria">RESERVAR MI AUDITORÍA <span aria-hidden="true">→</span></a>
 
     <div style="margin: clamp(40px,6vw,56px) 0 0; display: flex; justify-content: center; gap: 16px;">
       <a id="link-gracias-instagram" class="gr-social" href="https://www.instagram.com/enter__club/" target="_blank" rel="noopener" aria-label="Instagram de Enter Club" style="display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; box-shadow: inset 0 0 0 1.5px var(--border-default);">
