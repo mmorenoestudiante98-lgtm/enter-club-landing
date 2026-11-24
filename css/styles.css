@@ -263,6 +263,9 @@ a.ec-cta { display: inline-flex; align-items: center; justify-content: center; t
 a.ec-cta:hover { text-decoration: none; }
 .btn-header { background: var(--cream-100); color: var(--text-brand); height: 36px; padding: 0 16px; font-size: var(--fs-sm); box-shadow: var(--shadow-xs); }
 .btn-header:hover { color: var(--text-brand); }
+a.btn-header-ghost { background: transparent; color: var(--text-on-brand); box-shadow: inset 0 0 0 1.5px var(--text-on-brand); }
+a.btn-header-ghost:hover { color: var(--text-on-brand); box-shadow: inset 0 0 0 1.5px var(--text-on-brand), var(--shadow-lg); }
+@media (max-width: 480px) { a.btn-header-ghost, #cta-cabecera { padding: 0 12px; font-size: 13px; } }
 .btn-lg { background: var(--cream-100); color: var(--text-brand); height: 54px; padding: 0 32px; font-size: var(--fs-lg); box-shadow: var(--shadow-md); }
 .btn-lg:hover { color: var(--text-brand); }
 .btn-brand { background: var(--brand); color: var(--text-on-brand); height: 54px; padding: 0 32px; font-size: var(--fs-lg); box-shadow: var(--shadow-brand); }
